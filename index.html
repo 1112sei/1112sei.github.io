@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>文字数カウントツール</title>
     <link rel="stylesheet" href="文字数カウントツール.css">
 </head>
+
 <body>
     <h1 class="title">文字数カウントツール</h1>
-    <textarea class="textInput" id="text" value="文字を入力してください。"></textarea><br>
-    <input class="buttonInput" type="button" value="決定" id="btn">
+    <textarea id="text"></textarea><br>
+    <div class="output"><h2>この文章は</h2><h2 id="output">0</h2><h2 class="mojidesu">文字です</h2></div>
     <script>
-        function butotnClick(){
-            alert('この文章は' + answer.value.length + '文字です。');
+        let text = document.getElementById('text');
+        text.oninput = function () {
+            document.getElementById('output').textContent = text.value.length;
         }
-        let answer = document.getElementById('text');
-        let button = document.getElementById('btn');
-        button.addEventListener('click',butotnClick);
     </script>
 </body>
+
 </html>
