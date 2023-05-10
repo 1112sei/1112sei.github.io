@@ -14,7 +14,8 @@
     <script>
         let text = document.getElementById('text');
         text.oninput = function () {
-            document.getElementById('output').textContent = text.value.length;
+            let newText = text.value.replace(/\s/g, '');
+            document.getElementById('output').textContent = newText.length;
         }
     </script>
 </body>
