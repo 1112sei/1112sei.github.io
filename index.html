@@ -14,7 +14,7 @@
     <script>
         let text = document.getElementById('text');
         text.oninput = function () {
-            let newText = text.value.replace(/\s/g, '');
+            let newText = text.value.replace(/\s/g, '');//改行・空白の削除
             document.getElementById('output').textContent = newText.length;
         }
     </script>
