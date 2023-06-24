@@ -3,23 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="不要な機能を抹消した、シンプルな文字数カウントツールです。">
     <title>文字数カウントツール</title>
     <link rel="stylesheet" href="文字数カウントツール.css">
-    <meta name="google-site-verification" content="VZaQiv5icRmSMh6uZl3q9ZwQ12aJAZGazTRjT5y7e8Y" />
 </head>
 
 <body>
     <h1 class="title">文字数カウントツール</h1>
-    <textarea id="text"></textarea><br>
-    <div class="output"><h2>この文章は</h2><h2 id="output">0</h2><h2 class="mojidesu">文字です</h2></div>
-    <script>
-        let text = document.getElementById('text');
-        text.oninput = function () {
-            let newText = text.value.replace(/\s/g, '');
-            document.getElementById('output').textContent = newText.length;
-        }
-    </script>
+    <textarea id="textarea"></textarea><br>
+    <div class="output">
+        <h2>この文章は</h2>
+        <h2 id="output">0</h2>
+        <h2 id="end">文字です</h2>
+        <div class="select">
+            <label>文章<input type="checkbox" id="text"></label><br>
+            <label>単語<input type="checkbox" id="word"></label>
+        </div>
+    </div>
+    <script src="文字数カウントツール.js"></script>
 </body>
 
 </html>
