@@ -1,0 +1,28 @@
+@media (max-width: 670px){
+    .title {
+        font-size: 70px;
+    }
+
+    #textarea {
+        font-size: 30px;
+        width: 95%;
+        height: 300px;
+    }
+
+    .output {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    .select label {
+        font-size: 50px;
+    }
+
+    .select input {
+        width: 50px;
+        height: 50px;
+    }
+}
