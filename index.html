@@ -3,23 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=devoce-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="不要な機能を抹消した、シンプルな文字数カウントツールです。英語の語数や、文章数をカウントすることもできます。">
-    <title>文字数カウントツール</title>
+    <title id="site_title">文字数カウントツール</title>
     <link rel="stylesheet" href="文字数カウントツール.css">
     <link rel="stylesheet" href="文字カウントツール（レスポンシブデザイン）.css">
 </head>
 
 <body>
-    <h1 class="title">文字数カウントツール</h1>
-    <textarea id="textarea"></textarea><br>
+    <h1 class="title" id="title">文字数カウントツール</h1>
+    <textarea id="textarea" placeholder="ここに入力してください"></textarea><br>
     <div class="output">
-        <h2>この文章は</h2>
+        <h2 class="start" id="start">この文章は</h2>
         <h2 id="output">0</h2>
         <h2 id="end">文字です</h2>
-        <div class="select">
-            <label>文章<input type="checkbox" id="text"></label><br>
-            <label>単語<input type="checkbox" id="word"></label>
+        <div class="select" id="select">
+            <label id="textLabel">文章</label><input type="checkbox" id="text"><br>
+            <label id="wordLabel">単語</label><input type="checkbox" id="word">
         </div>
     </div>
     <script src="文字数カウントツール.js"></script>
