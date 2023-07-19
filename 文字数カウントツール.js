@@ -5,10 +5,23 @@ const end = document.getElementById('end');
 const output = document.getElementById('output');
 let newText = "";
 let newWord = [];
+const lang = window.navigator.language;
+window.onload = () => {
+    if (lang !== 'ja') {
+        document.getElementById('title').textContent = 'WORD COUNT TOOL';
+        textarea.placeholder = 'enter here';
+        document.getElementById('start').textContent = 'This article is';
+        end.textContent = 'character';
+        document.getElementById('textLabel').textContent = 'sentence';
+        document.getElementById('wordLabel').textContent = 'word';
+        document.getElementById('select').style.top = '80px';
+        document.getElementById('site_title').textContent = 'Word count tool';
+    }
+}
 textarea.oninput = function () {
-    if (end.textContent === '文字です') {
+    if (end.textContent === '文字です' || end.textContent === 'character') {
         searchLetter();
-    } else if (end.textContent === '語です') {
+    } else if (end.textContent === '語です' || end.textContent === 'word') {
         searchWord();
     } else {
         searchText();
@@ -20,10 +33,18 @@ text.onchange = function () {
         word.checked = false;
     }
     if (text.checked) {
-        end.textContent = '文です';
+        if (lang == 'ja') {
+            end.textContent = '文です';
+        } else {
+            end.textContent = 'sentence';
+        }
         searchText();
     } else {
-        end.textContent = '文字です';
+        if (lang == 'ja') {
+            end.textContent = '文字です';
+        } else {
+            end.textContent = 'character';
+        }
         searchLetter();
     }
 }
@@ -33,10 +54,18 @@ word.onchange = function () {
         text.checked = false;
     }
     if (word.checked) {
-        end.textContent = '語です';
+        if (lang == 'ja') {
+            end.textContent = '語です';
+        } else {
+            end.textContent = 'word';
+        }
         searchWord();
     } else {
-        end.textContent = '文字です';
+        if (lang == 'ja') {
+            end.textContent = '文字です';
+        } else {
+            end.textContent = 'character';
+        }
         searchLetter();
     }
 }
