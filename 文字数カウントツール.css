@@ -46,13 +46,17 @@ h1 {
 }
 
 #output {
+    font-size: 40px;
     display: inline;
     user-select: auto;
 }
 
 h2 {
-    font-size: 40px;
     user-select: none;
+}
+
+.start {
+    font-size: 40px;
 }
 
 #end {
